@@ -20,6 +20,8 @@ VisualEffectResource:
     m_PreWarmDeltaTime: 0.05
     m_PreWarmStepCount: 0
     m_InitialEventName: OnPlay
+    m_InstancingMode: -1
+    m_InstancingCapacity: 64
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -177,7 +179,7 @@ MonoBehaviour:
     enumValues: []
     descendantCount: 0
   m_ImportDependencies: []
-  m_GraphVersion: 8
+  m_GraphVersion: 12
   m_ResourceVersion: 1
   m_SubgraphDependencies:
   - {fileID: 5371698745253816930, guid: f92dd42b952d2d741bb828215c30cefe, type: 3}
@@ -515,8 +517,7 @@ MonoBehaviour:
   - {fileID: 405}
   - {fileID: 451}
   - {fileID: 500}
-  m_Subgraph: {fileID: 5371698745253816930, guid: f92dd42b952d2d741bb828215c30cefe,
-    type: 3}
+  m_Subgraph: {fileID: 5371698745253816930, guid: f92dd42b952d2d741bb828215c30cefe, type: 3}
 --- !u!114 &49
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -969,8 +970,7 @@ MonoBehaviour:
   - {fileID: 393}
   - {fileID: 463}
   - {fileID: 501}
-  m_Subgraph: {fileID: 5371698745253816930, guid: f92dd42b952d2d741bb828215c30cefe,
-    type: 3}
+  m_Subgraph: {fileID: 5371698745253816930, guid: f92dd42b952d2d741bb828215c30cefe, type: 3}
 --- !u!114 &88
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1424,8 +1424,7 @@ MonoBehaviour:
   - {fileID: 381}
   - {fileID: 475}
   - {fileID: 502}
-  m_Subgraph: {fileID: 5371698745253816930, guid: f92dd42b952d2d741bb828215c30cefe,
-    type: 3}
+  m_Subgraph: {fileID: 5371698745253816930, guid: f92dd42b952d2d741bb828215c30cefe, type: 3}
 --- !u!114 &127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1879,8 +1878,7 @@ MonoBehaviour:
   - {fileID: 369}
   - {fileID: 487}
   - {fileID: 503}
-  m_Subgraph: {fileID: 5371698745253816930, guid: f92dd42b952d2d741bb828215c30cefe,
-    type: 3}
+  m_Subgraph: {fileID: 5371698745253816930, guid: f92dd42b952d2d741bb828215c30cefe, type: 3}
 --- !u!114 &166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9076,8 +9074,7 @@ MonoBehaviour:
   - {fileID: 794}
   - {fileID: 799}
   - {fileID: 804}
-  m_Subgraph: {fileID: 5371698745253816930, guid: 5f3900d7d78aaff43abfb35e7910fb25,
-    type: 3}
+  m_Subgraph: {fileID: 5371698745253816930, guid: 5f3900d7d78aaff43abfb35e7910fb25, type: 3}
 --- !u!114 &788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9822,8 +9819,7 @@ MonoBehaviour:
   - {fileID: 816}
   - {fileID: 821}
   - {fileID: 826}
-  m_Subgraph: {fileID: 5371698745253816930, guid: 5f3900d7d78aaff43abfb35e7910fb25,
-    type: 3}
+  m_Subgraph: {fileID: 5371698745253816930, guid: 5f3900d7d78aaff43abfb35e7910fb25, type: 3}
 --- !u!114 &810
 MonoBehaviour:
   m_ObjectHideFlags: 0

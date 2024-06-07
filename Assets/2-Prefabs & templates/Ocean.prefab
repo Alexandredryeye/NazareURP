@@ -1443,7 +1443,7 @@ MonoBehaviour:
   swellPeriodRef: 2s
   breakersExtraSpeedFactor: 1
   breakersTorqueFactor: 1
-  fixedFrameRate: 60
+  fixedFrameRate: 20
   particleLightingFactor: 1
   oceanObjectDisplacementWithCameraAngle: 70
 --- !u!2083052967 &1919658865892365748
@@ -1459,7 +1459,7 @@ VisualEffect:
   m_InitialEventNameOverriden: 0
   m_StartSeed: 0
   m_ResetSeedOnPlay: 1
-  m_AllowInstancing: 1
+  m_AllowInstancing: 0
   m_ResourceVersion: 1
   m_PropertySheet:
     m_Float:
@@ -1525,7 +1525,7 @@ VisualEffect:
       - m_Value: {x: 0, y: -200, z: 0}
         m_Name: _terrainPosition
         m_Overridden: 1
-      - m_Value: {x: 1, y: 1, z: 1}
+      - m_Value: {x: 1000, y: 300, z: 1000}
         m_Name: _terrainScale
         m_Overridden: 1
     m_Vector4f:
