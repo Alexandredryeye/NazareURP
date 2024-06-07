@@ -83,7 +83,7 @@ namespace StormBreakers
         public string swellPeriodRef;
 
         [Space(10)]
-        [Header("Global tweaks")] 
+        [Header("Global tweaks")]
         [Tooltip("The factor used to compute the velocity of the breaking wave. Set it to zero if you want no breaking physic effect.")]
         [Range(0, 5f)] public float breakersExtraSpeedFactor = 1f;
         [Tooltip("The factor used to compute the torque of the breaking wave. Set it to zero if you want no breaking torque effect.")]
@@ -103,7 +103,7 @@ namespace StormBreakers
         private void OnEnable()
         {
             // ------------- physics ---------------
-            Time.fixedDeltaTime = 1f/fixedFrameRate;
+            Time.fixedDeltaTime = 1f / fixedFrameRate;
             // -------------- static construction ------------
             //constructing statics arrays that cannot be managed
             Ocean.ConstructStaticData();
@@ -279,10 +279,10 @@ namespace StormBreakers
             Vector3 newPosition = new Vector3(camera.transform.position.x, 0f, camera.transform.position.z);
 
             // adding some distance in front of the camera, is not excalty the camera focus. This distance is dependant of the scale of the ocean
-            newPosition += Vector3.Scale(transform.localScale, oceanObjectDisplacementWithCameraAngle*Vector3.ProjectOnPlane(camera.transform.forward, Vector3.up));
+            newPosition += Vector3.Scale(transform.localScale, oceanObjectDisplacementWithCameraAngle * Vector3.ProjectOnPlane(camera.transform.forward, Vector3.up));
 
             // rounding to 2 meters avoid jittering in the wave crest
-            transform.position = new Vector3(2f*Mathf.Round(newPosition.x*0.5f), 0f, 2f*Mathf.Round(newPosition.z*0.5f));
+            transform.position = new Vector3(2f * Mathf.Round(newPosition.x * 0.5f), 0f, 2f * Mathf.Round(newPosition.z * 0.5f));
         }
 
 
@@ -300,15 +300,15 @@ namespace StormBreakers
             Ocean.wavelength[2] = wavelength2;
             Ocean.wavelength[3] = wavelength3;
 
-            Ocean.direction[0] = Mathf.Deg2Rad*direction0;
-            Ocean.direction[1] = Mathf.Deg2Rad*direction1;
-            Ocean.direction[2] = Mathf.Deg2Rad*direction2;
-            Ocean.direction[3] = Mathf.Deg2Rad*direction3;
+            Ocean.direction[0] = Mathf.Deg2Rad * direction0;
+            Ocean.direction[1] = Mathf.Deg2Rad * direction1;
+            Ocean.direction[2] = Mathf.Deg2Rad * direction2;
+            Ocean.direction[3] = Mathf.Deg2Rad * direction3;
 
-            Ocean.intensity[0] = intensity0*waveIntensity;
-            Ocean.intensity[1] = intensity1*waveIntensity;
-            Ocean.intensity[2] = intensity2*waveIntensity;
-            Ocean.intensity[3] = intensity3*waveIntensity;
+            Ocean.intensity[0] = intensity0 * waveIntensity;
+            Ocean.intensity[1] = intensity1 * waveIntensity;
+            Ocean.intensity[2] = intensity2 * waveIntensity;
+            Ocean.intensity[3] = intensity3 * waveIntensity;
 
             Ocean.randomization[0] = 1f - waveDensity0;
             Ocean.randomization[1] = 1f - waveDensity1;
@@ -327,7 +327,7 @@ namespace StormBreakers
             Ocean.surfaceIntensity = 0f;
 
             // running through each wave system, Ocean intensity should have been initialized by the ripples intensity
-            for (int w = 0; w<4; w++)
+            for (int w = 0; w < 4; w++)
             {
                 // checking the current wave intensity against the saved value to search the maximum 
                 if (Ocean.intensity[w] > Ocean.surfaceIntensity)
@@ -387,7 +387,7 @@ namespace StormBreakers
             else
             {
                 Ocean.Wind.speed = 5f; // 18km/h of wind
-                Ocean.Wind.inverseHeight = 1f/5f; // at 5m height
+                Ocean.Wind.inverseHeight = 1f / 5f; // at 5m height
                 Ocean.Wind.direction = 0f; // in opposite red axis direction
                 Ocean.Wind.cosDirection = -1f;
                 Ocean.Wind.sinDirection = 0f;
@@ -401,20 +401,20 @@ namespace StormBreakers
             Ocean.sharedMaterial.SetFloat("_ripplesDirection", Ocean.Wind.direction);
 
             // setting the ripples intensity function of the wind strenght, is maximal as soon the wind reachs 36km/h
-            float ripplesIntensity = Mathf.Min(1f, Ocean.Wind.speed*0.1f);
+            float ripplesIntensity = Mathf.Min(1f, Ocean.Wind.speed * 0.1f);
             Ocean.sharedMaterial.SetFloat("_ripplesIntensity", ripplesIntensity);
 
             // saving the ripple intensity so when the wave are updated we now which has the maximal intensity
             //Ocean.surfaceIntensity = Mathf.Max(Ocean.surfaceIntensity, ripplesIntensity);
 
             // setting the surfacesmoothness function of the wind, is minimal (0.7) as soon the wind reachs 72km/h, is 1 when no wind at all.
-            Ocean.sharedMaterial.SetFloat("_smoothness", Mathf.Clamp(1.1f - 0.015f*Ocean.Wind.speed, 0.7f, 1f));
+            Ocean.sharedMaterial.SetFloat("_smoothness", Mathf.Clamp(1.1f - 0.015f * Ocean.Wind.speed, 0.7f, 1f));
 
             // ------- VFX
             // setting the wind
             if (oceanVFX != null)
             {
-                oceanVFX.SetVector3("_wind", new Vector3(Ocean.Wind.speed*Ocean.Wind.cosDirection, Ocean.Wind.inverseHeight, Ocean.Wind.speed*Ocean.Wind.sinDirection));
+                oceanVFX.SetVector3("_wind", new Vector3(Ocean.Wind.speed * Ocean.Wind.cosDirection, Ocean.Wind.inverseHeight, Ocean.Wind.speed * Ocean.Wind.sinDirection));
             }
             #endregion
         }
@@ -445,11 +445,11 @@ namespace StormBreakers
 
             if (mainLight != null)
             {
-                mainLightColor = mainLight.color*mainLight.intensity;
+                mainLightColor = mainLight.color * mainLight.intensity;
             }
 
             // making the sum of ambient and directional light (approx), can be above pure white
-            Color totalLight = RenderSettings.ambientIntensity*ambientColor + mainLightColor*0.5f;
+            Color totalLight = RenderSettings.ambientIntensity * ambientColor + mainLightColor * 0.5f;
 
             // unsaturating 
             //totalLight = particleLightingFactor * new Color(Mathf.Atan(totalLight.r), Mathf.Atan(totalLight.g), Mathf.Atan(totalLight.b));
@@ -473,31 +473,31 @@ namespace StormBreakers
         }
 
         // editor script
-#if UNITY_EDITOR
-        private void OnValidate()
-        {
-            // trick to refresh scene because there is a bug with material serialization 
-            clickHereToRefresh = false;
+        // #if UNITY_EDITOR
+        //         private void OnValidate()
+        //         {
+        //             // trick to refresh scene because there is a bug with material serialization 
+        //             clickHereToRefresh = false;
 
-            // checking the ordering of the wave length
-            //if (wavelength1 > wavelength0) { wavelength1 = wavelength0; }
-            //if (wavelength2 > wavelength1) { wavelength2 = wavelength1; }
-            //if (wavelength3 > wavelength2) { wavelength3 = wavelength2; }
+        //             // checking the ordering of the wave length
+        //             //if (wavelength1 > wavelength0) { wavelength1 = wavelength0; }
+        //             //if (wavelength2 > wavelength1) { wavelength2 = wavelength1; }
+        //             //if (wavelength3 > wavelength2) { wavelength3 = wavelength2; }
 
-            // computing the average wave height
-            float waveHeight0 = wavelength0*Mathf.Min(1f, intensity0*waveIntensity)*(1f - 0.5f*waveDensity0)*0.17f;
+        //             // computing the average wave height
+        //             float waveHeight0 = wavelength0*Mathf.Min(1f, intensity0*waveIntensity)*(1f - 0.5f*waveDensity0)*0.17f;
 
-            // rounding to the decimeter
-            waveHeight0 = 0.1f*Mathf.Round(waveHeight0*10f);
+        //             // rounding to the decimeter
+        //             waveHeight0 = 0.1f*Mathf.Round(waveHeight0*10f);
 
-            // indicating the wave height in m and the period in seconds
-            swellHeightRef = waveHeight0 + "m";
-            swellPeriodRef = Mathf.Round(Mathf.Sqrt(2f*Mathf.PI*wavelength0/15.81f)) + "s";
+        //             // indicating the wave height in m and the period in seconds
+        //             swellHeightRef = waveHeight0 + "m";
+        //             swellPeriodRef = Mathf.Round(Mathf.Sqrt(2f*Mathf.PI*wavelength0/15.81f)) + "s";
 
-            // initializing everything
-            OnEnable();
-        }
-#endif
+        //             // initializing everything
+        //             OnEnable();
+        //         }
+        // #endif
     }
 
 }

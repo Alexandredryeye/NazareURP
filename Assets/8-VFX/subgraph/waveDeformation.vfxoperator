@@ -20,6 +20,8 @@ VisualEffectResource:
     m_PreWarmDeltaTime: 0.05
     m_PreWarmStepCount: 0
     m_InitialEventName: OnPlay
+    m_InstancingMode: -1
+    m_InstancingCapacity: 64
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,7 +117,7 @@ MonoBehaviour:
     enumValues: []
     descendantCount: 0
   m_ImportDependencies: []
-  m_GraphVersion: 8
+  m_GraphVersion: 12
   m_ResourceVersion: 1
   m_SubgraphDependencies:
   - {fileID: 5371698745253816930, guid: 94590dd6c8a868440a3f3d6d14a48b16, type: 3}
@@ -287,8 +289,7 @@ MonoBehaviour:
   - {fileID: 29}
   m_OutputSlots:
   - {fileID: 30}
-  m_Subgraph: {fileID: 5371698745253816930, guid: 94590dd6c8a868440a3f3d6d14a48b16,
-    type: 3}
+  m_Subgraph: {fileID: 5371698745253816930, guid: 94590dd6c8a868440a3f3d6d14a48b16, type: 3}
 --- !u!114 &28
 MonoBehaviour:
   m_ObjectHideFlags: 0

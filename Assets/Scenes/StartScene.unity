@@ -1165,7 +1165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FadeScreen: {fileID: 1134449168}
-  sceneIndex: 0
+  sceneIndex: 1
   SoundFX: {fileID: 588587734}
 --- !u!135 &1449411974
 SphereCollider:
