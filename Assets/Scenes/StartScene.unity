@@ -1145,6 +1145,7 @@ GameObject:
   - component: {fileID: 1449411975}
   - component: {fileID: 1449411974}
   - component: {fileID: 1449411973}
+  - component: {fileID: 1449411978}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -1253,6 +1254,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -160.212, z: 0}
+--- !u!54 &1449411978
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449411972}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &1548251155
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,8 +2041,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.023490433, y: 0.022681123, z: 0.013115125}
-  m_Center: {x: -0.0002441383, y: -0.009841063, z: -0.00015210436}
+  m_Size: {x: 0.061991137, y: 0.040275898, z: 0.05482844}
+  m_Center: {x: 0.0012820214, y: -0.018638449, z: -0.016607584}
 --- !u!54 &1825262785
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2041,7 +2069,7 @@ Rigidbody:
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 126
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!1 &2045122112
 GameObject:
   m_ObjectHideFlags: 0
@@ -2155,7 +2183,6 @@ SceneRoots:
   - {fileID: 1825262782}
   - {fileID: 1703568386}
   - {fileID: 652206373}
-  - {fileID: 1449411977}
   - {fileID: 588587735}
   - {fileID: 749564268}
   - {fileID: 1082673389}
@@ -2166,3 +2193,4 @@ SceneRoots:
   - {fileID: 116156450}
   - {fileID: 1569817284}
   - {fileID: 1193304335}
+  - {fileID: 1449411977}

@@ -70,3 +70,7 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/Scenes/Vídeo 02.unity
+Assets/Scenes/Vídeo 01.unity
+Assets/Videos/NazareVideo01.mp4
+Assets/Videos/NazareVideo02.mp4
