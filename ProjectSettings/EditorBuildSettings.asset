@@ -15,10 +15,10 @@ EditorBuildSettings:
     path: Assets/Scenes/NazareWave.unity
     guid: d7e7fe6290ce3ee4d9c7f9c76dfabc66
   - enabled: 1
-    path: "Assets/Scenes/V\xEDdeo 01.unity"
+    path: "Assets/Scenes/V\xEDdeo 1.unity"
     guid: 5e0c6ffa01111e7489a913b3b36144cc
   - enabled: 1
-    path: "Assets/Scenes/V\xEDdeo 02.unity"
+    path: "Assets/Scenes/V\xEDdeo 2.unity"
     guid: 62b8fca8d95bbb14db369608eb54ca1a
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
